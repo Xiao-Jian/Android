@@ -1,0 +1,294 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 显示框 -->
+	<LinearLayout
+	    
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="2"
+	    android:orientation="vertical"
+	    android:background="#EEE9E9"
+	    >
+	    <EditText 
+	        android:textSize="25dp"
+	        android:longClickable="false"
+	        android:id="@+id/num1inputview"
+	        android:cursorVisible="false"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:inputType="numberDecimal"
+	        android:gravity="center|right"
+	        android:maxLines="1"
+	        android:lines="1"
+	        android:enabled="false"
+	        android:background="#EEE9E9"
+	        android:textColor="#000000"
+	        
+	        />
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	   	 	android:layout_weight="2"
+	    	android:orientation="horizontal"
+	        >
+	        <EditText 
+	            android:longClickable="false"
+				android:id="@+id/operatorinputview"
+				android:cursorVisible="false"
+	       	 	android:layout_width="100dp"
+	       	 	android:gravity="center|left"
+	       	 	android:digits="+-*/"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="numberDecimal"
+	        	android:layout_weight="2"
+	        	android:maxLines="1"
+	        	android:lines="1"	 
+	        	android:enabled="false"   
+	        	android:background="#EEE9E9"
+	       		android:textColor="#000000"        
+	            />
+			<EditText 
+			    android:textSize="25dp"
+			    android:longClickable="false"
+				android:id="@+id/num2inputview"
+				android:cursorVisible="false"
+	       	 	android:layout_width="fill_parent"
+	       	 	android:inputType="numberDecimal"
+	       	 	android:gravity="center|right"
+	        	android:layout_height="wrap_content"
+	        	android:layout_weight="2"
+	        	android:maxLines="1"
+	        	android:lines="1"	 
+	        	android:enabled="false"
+	        	android:background="#EEE9E9"
+	       		android:textColor="#000000"            
+	            />	        
+	        
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	   	 	android:layout_weight="2"
+	    	android:orientation="horizontal"
+	    	android:background="#EEE9E9"
+	    	
+	        >
+	        <EditText 
+	            android:longClickable="false"
+				android:id="@+id/equalinputview"
+				android:cursorVisible="false"
+	       	 	android:layout_width="100dp"
+	       	 	android:gravity="center|left"
+	        	android:layout_height="wrap_content"
+	        	android:inputType="numberDecimal"
+	        	android:layout_weight="2"
+	        	android:maxLines="1"
+	        	android:lines="1"	 
+	        	android:enabled="false" 
+	        	android:background="#EEE9E9"
+	       		android:textColor="#000000"           
+	            />
+			<EditText
+			    android:longClickable="false"
+				android:id="@+id/resultinputview"
+				android:cursorVisible="false"
+	       	 	android:layout_width="fill_parent"
+	        	android:layout_height="wrap_content"
+	        	android:layout_weight="2"
+	        	android:maxLines="1"
+	        	android:inputType="none"
+	        	android:gravity="center|right"
+	        	android:lines="1"	      
+	        	android:enabled="false" 
+	        	android:background="#EEE9E9"
+	       		android:textColor="#000000"   
+	       		android:textSize="25dp"   
+	            />	        
+	        
+	    </LinearLayout>
+	</LinearLayout>
+	
+	<!-- 键盘 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/num7btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/seven" />
+
+            <Button
+                android:id="@+id/num8btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/eight" />
+
+            <Button
+                android:id="@+id/num9btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/nine" />
+
+            <Button
+                android:id="@+id/signdividebtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/divide" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/num4btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/num5btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/five" />
+
+            <Button
+                android:id="@+id/num6btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/six" />
+
+            <Button
+                android:id="@+id/signmutibtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/muti" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/num1btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/num2btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/num3btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/signminusbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/minus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/pointbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/point" />
+
+            <Button
+                android:id="@+id/num0btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/signequalbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/equal" />
+
+            <Button
+                android:id="@+id/signplusbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/plus" />
+        </LinearLayout>
+    </LinearLayout>
+	
+	<!-- 退出键 -->
+	
+	   <LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	   	 	android:layout_weight="1"
+	    	android:orientation="horizontal"
+	        >
+	        <Button 
+				android:id="@+id/confirmbtn"
+	       	 	android:layout_width="100dp"
+	        	android:layout_height="wrap_content"
+				android:layout_gravity="left|center_vertical"
+            	android:text="@string/confirm"
+	            />
+
+	        <Button
+	            android:id="@+id/clearbtn"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="120dp"
+	            android:layout_gravity="center_vertical" 
+	            android:text="@string/clear"
+	            />
+	        
+	    </LinearLayout> 
+	
+	
+	
+	
+</LinearLayout>
