@@ -1,2 +1,2 @@
 # Android
-The android's project
+The android project
