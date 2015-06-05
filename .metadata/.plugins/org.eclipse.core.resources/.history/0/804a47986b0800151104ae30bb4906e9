@@ -1,0 +1,90 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.*;
+import javax.swing.*;
+
+public class t {
+	/**    
+	* @param args   
+	*/   
+	public static void main(String[] args) {   
+		// TODO Auto-generated method stub
+	   	Diagram dia=new Diagram();  
+	}  
+}
+class Diagram extends JFrame implements ActionListener {  
+	JMenuBar menu=new JMenuBar();  
+	JMenu file=new JMenu("File");  
+	JMenuItem start=new JMenuItem("Start");  
+	Container con=getContentPane();  
+	//int a,c=1;  
+	//String[] num;   
+	double [] DATA = new double[1001];
+	JFileChooser chooser=new JFileChooser();  
+	Diagram() {   
+		super("ProgrammingV1.1");   
+		this.setBounds(500,200,400,400);   
+		setJMenuBar(menu);   
+		menu.add(file);
+		file.add(start);      
+		start.addActionListener(this);  
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);   
+		this.setVisible(true);    
+	}     
+	public void actionPerformed(ActionEvent e) {   
+		// TODO Auto-generated method stub   
+		if(e.getSource()==start) {    
+			con.repaint();     
+			choice();    
+			paintComponents(getGraphics());    
+		}
+	}     
+	public void paintComponents(Graphics g) {   
+		//super.paintComponents(g);  
+		//Graphics2D g2= (Graphics2D)g; 
+		//String s=JOptionPane.showInputDialog(null, "输入点数", "随机生成散点图", JOptionPane.QUESTION_MESSAGE);
+	  	g.setColor(Color.RED);     
+	   	g.drawLine(30, 70, 30, 370);    
+	   	g.drawLine(30, 370, 330, 370);    
+	   	g.drawString("0", 15, 380);    
+	   	g.drawString("300", 325, 385);    
+	   	g.drawString("300", 8, 65);    
+	   	int i=0;     
+	   	while(i<DATA.length) {         
+	   		i=i+1;      
+	   		g.setColor(Color.BLUE);      
+	   		g.drawLine(i+30,(int)(70+DATA[i]),i+30,(int)(70+DATA[i]));    
+		}     
+	}   
+	void choice() {
+		int t=0;
+		int z=5;
+		int w=10;
+		//int Y=6000;
+		int Y=60;
+		double R1,R2,D;
+		//double G=10000.00;
+		double G=100.00;
+		//double I=1000.00;
+		double I=10.00;
+		//double [] DATA = new double[1001];
+		D=Y-I;
+		R1=D/z;
+		R2=G/w;
+		//System.out.println(t+"        "+I);
+		DATA[0]=I;
+		while(t<1000)
+		{
+			t=t+1;
+			I=I+R2;
+			G=G+R1-R2;
+			D=Y-I;
+			R1=D/z;
+			R2=G/w;
+			//System.out.println(t+"        "+I);
+			//DATA[t]=I;
+			DATA[t]=t+1;
+		}
+	}
+}
