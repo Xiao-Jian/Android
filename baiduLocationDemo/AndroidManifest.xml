@@ -51,7 +51,7 @@
         <!-- meta-data需要写在application中 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="请输入申请的key" />
+            android:value="mXLMPfUY2RAlScbp9UZY50NO" />
 
         <activity
             android:name="com.baidu.baidulocationdemo.MainActivity"
